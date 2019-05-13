@@ -18,37 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is Prime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-76-8tK">
-                                <rect key="frame" x="140" y="20" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Prime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-76-8tK">
+                                <rect key="frame" x="140.5" y="20" width="94" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Inform a whole number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adm-MU-ofn">
-                                <rect key="frame" x="16" y="58" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Inform a whole number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adm-MU-ofn">
+                                <rect key="frame" x="103" y="58" width="169.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169.5" id="JSU-g9-U1Q"/>
+                                    <constraint firstAttribute="height" constant="30" id="URb-IP-a0Y"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au9-oD-dPH">
-                                <rect key="frame" x="165" y="96" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au9-oD-dPH">
+                                <rect key="frame" x="165.5" y="96" width="44" height="30"/>
                                 <state key="normal" title="Check"/>
                                 <connections>
                                     <action selector="checkNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u5H-Qd-wlY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-Bk-nMV">
-                                <rect key="frame" x="16" y="134" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-Bk-nMV">
+                                <rect key="frame" x="187.5" y="134" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="au9-oD-dPH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vE-Gs-T5l"/>
+                            <constraint firstItem="Rek-Bk-nMV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pf2-rr-mAj"/>
+                            <constraint firstItem="Adm-MU-ofn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YmP-PD-kHq"/>
+                            <constraint firstItem="xf5-76-8tK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bDd-wg-4h2"/>
+                            <constraint firstItem="xf5-76-8tK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e2F-7W-Hxt"/>
+                            <constraint firstItem="Rek-Bk-nMV" firstAttribute="top" secondItem="au9-oD-dPH" secondAttribute="bottom" constant="8" id="edc-BO-JZx"/>
+                            <constraint firstItem="au9-oD-dPH" firstAttribute="top" secondItem="Adm-MU-ofn" secondAttribute="bottom" constant="8" id="pDC-tP-Si9"/>
+                            <constraint firstItem="Adm-MU-ofn" firstAttribute="top" secondItem="xf5-76-8tK" secondAttribute="bottom" constant="8" id="xqk-Ax-oz3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
