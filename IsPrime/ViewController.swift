@@ -9,31 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var inputNumber: UITextField!
     @IBOutlet weak var result: UILabel!
-    
     @IBAction func checkNumber(_ sender: Any) {
         if let number = inputNumber.text {
-            if let numberInt = Int(number) {
-                
-                let limit = Int(sqrt(Double(numberInt)) + 1)
-                var isPrime = true
+            var isPrime = true
+            
+            if Int(number) != 1 && Int(number) != 2{
+                if let numberInt = Int(number) {
                     
-                for i in 2 ... Int(limit) {
-                    if numberInt % i == 0 {
-                        isPrime = false
-                        break
+                    let limit = Int(sqrt(Double(numberInt)) + 1)
+                    
+                    for i in 2 ... Int(limit) {
+                        if numberInt % i == 0 {
+                            isPrime = false
+                            break
+                        }
                     }
                 }
-                
-                if isPrime {
-                    result.text = "O número \(numberInt) é primo"
-                } else {
-                    result.text = "O número \(numberInt) não é primo"
-                }
-                
-                inputNumber.text = ""
             }
+            
+            if isPrime {
+                result.text = "O número é primo"
+            } else {
+                result.text = "O número não é primo"
+            }
+            
+            inputNumber.text = ""
         }
     }
     
